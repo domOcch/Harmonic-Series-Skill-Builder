@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/middleSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textSize="48sp"
+        app:autoSizeMaxTextSize="96sp"
+        app:autoSizeStepGranularity="20sp"
+        app:autoSizeTextType="uniform" />
+
+    <TextView
+        android:id="@+id/instrumentPromptTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="@string/instrumentPrompt"
+        android:textSize="24sp"
+        app:autoSizeTextType="none" />
+
+    <Spinner
+        android:id="@+id/instrumentDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
+    <FrameLayout
+        android:id="@+id/startButtonFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/startButtonText" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/directionsButtonFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <Button
+            android:id="@+id/directionsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/directionsButtonText" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottomSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+    </FrameLayout>
+</LinearLayout>

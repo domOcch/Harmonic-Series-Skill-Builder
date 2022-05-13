@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HonorsOption occhiet1</string>
+    <string name="title">Harmonic Series\nSkill Builder</string>
+    <string name="instrumentPrompt">Choose instrument:</string>
+    <string name="startButtonText">Start Excercise</string>
+    <string name="directionsButtonText">Directions</string>
+    <string name="play_correct">Play Correct</string>
+    <string name="play_yours">Play Yours</string>
+    <string name="check_series">Check Series</string>
+    <string name="incorrect_title">Incorrect</string>
+    <string name="correct_title">Correct!</string>
+    <string name="show_answer">Show Answer</string>
+    <string name="new_series">New Harmonic Series</string>
+    <string name="incorrect_dialogue_message">The following harmonics are incorrect:\u0020</string>
+    <string-array name="instrument_array">
+        <item>Horn (F\/Bb)</item>
+        <item>Trumpet (Bb)</item>
+        <item>Trombone (C)</item>
+        <item>Tuba (C)</item>
+    </string-array>
+</resources>

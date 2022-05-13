@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HarmonicSeriesActivity">
+
+    <LinearLayout
+        android:id="@+id/verticalLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/rightSideMenuFrame"
+        android:orientation="vertical">
+
+        <view
+            android:id="@+id/harmonicSeriesView"
+            class="edu.msu.occhiet1.honorsoption.HarmonicSeriesView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" />
+
+        <RelativeLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical">
+
+            <FrameLayout
+                android:id="@+id/layoutPlayCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/buttonPlayCorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/play_correct" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layoutPlayYours"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@id/layoutPlayCorrect">
+
+                <Button
+                    android:id="@+id/buttonPlayYours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:enabled="false"
+                    android:text="@string/play_yours" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layoutCheckSeries"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/layoutPlayYours">
+
+                <Button
+                    android:id="@+id/buttonCheckSeries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:enabled="false"
+                    android:onClick="onCheckSeriesClicked"
+                    android:text="@string/check_series" />
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightSideMenuFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#A1A1A1"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/noteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/accidentalRadioGroup"
+            android:background="#00FFFFFF"
+            android:onClick="onAddNoteClicked"
+            android:src="@mipmap/whole_note" />
+
+        <RadioGroup
+            android:id="@+id/accidentalRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noteButton"
+            android:layout_alignParentEnd="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/naturalRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@mipmap/natural"
+                android:button="@null"
+                android:onClick="radioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/sharpRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@mipmap/sharp"
+                android:button="@null"
+                android:onClick="radioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/flatRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@mipmap/flat"
+                android:button="@null"
+                android:onClick="radioButtonClicked" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+</RelativeLayout>

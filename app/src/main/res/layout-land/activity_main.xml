@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/verticalLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/leftHorizontalLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textSize="48sp"
+            app:autoSizeMaxTextSize="48sp"
+            app:autoSizeStepGranularity="8sp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/instrumentPromptTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/instrumentPrompt"
+            android:textSize="24sp"
+            app:autoSizeTextType="none" />
+
+        <Spinner
+            android:id="@+id/instrumentDropdown"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightVerticalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/topSpacer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/startButtonFrame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="onStartHarmonicSeries"
+                android:text="@string/startButtonText" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/middleSpacer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/directionsButtonFrame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <Button
+                android:id="@+id/directionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/directionsButtonText" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottomSpacer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
